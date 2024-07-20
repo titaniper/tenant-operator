@@ -1,0 +1,23 @@
+# permissions for end users to view cronjobs.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  labels:
+    app.kubernetes.io/name: tenant-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: cronjob-viewer-role
+rules:
+- apiGroups:
+  - batch.ben.com
+  resources:
+  - cronjobs
+  verbs:
+  - get
+  - list
+  - watch
+- apiGroups:
+  - batch.ben.com
+  resources:
+  - cronjobs/status
+  verbs:
+  - get

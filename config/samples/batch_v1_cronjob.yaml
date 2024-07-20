@@ -1,0 +1,9 @@
+apiVersion: batch.ben.com/v1
+kind: CronJob
+metadata:
+  labels:
+    app.kubernetes.io/name: tenant-operator
+    app.kubernetes.io/managed-by: kustomize
+  name: cronjob-sample
+spec:
+  # TODO(user): Add fields here
