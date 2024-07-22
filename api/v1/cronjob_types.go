@@ -30,6 +30,7 @@ type CronJobSpec struct {
 
 	// Foo is an example field of CronJob. Edit cronjob_types.go to remove/update
 	Foo string `json:"foo,omitempty"`
+	Bar string `json:"bar,omitempty"`
 }
 
 // CronJobStatus defines the observed state of CronJob
